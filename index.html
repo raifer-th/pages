@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatos SIT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: block;
+            margin: 12px auto;
+            padding: 15px 20px;
+            width: 90%;
+            max-width: 400px;
+            background-color: #1abc9c;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+        }
+
+        .section {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                font-size: 20px;
+                padding: 18px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha a região de contato</h1>
+    <a class="btn" href="#" onclick="showSection('sc')">Brasil - SC</a>
+    <a class="btn" href="#" onclick="showSection('rj')">Brasil - RJ</a>
+    <a class="btn" href="#" onclick="showSection('china')">China</a>
+
+    <div id="sc" class="section">
+        <h2>Contato - Brasil SC</h2>
+        <a class="btn" href="tel:+554991742530">📞 Ligar</a>
+        <a class="btn" href="https://api.whatsapp.com/send?phone=554991742530" target="_blank">💬 WhatsApp</a>
+        <a class="btn" href="#" onclick="alert('Adicione manualmente no WeChat');">🈲 WeChat</a>
+        <a class="btn" href="https://www.google.com/maps?q=Rua+Irineu+Bornhausen,+930,+Chapecó+-+SC" target="_blank">📍 Ver Local</a>
+        <a class="btn" href="https://www.speedintrade.com" target="_blank">🌐 Site</a>
+        <a class="btn" href="https://www.instagram.com/speedintrade/" target="_blank">📸 Instagram</a>
+    </div>
+
+    <div id="rj" class="section">
+        <h2>Contato - Brasil RJ</h2>
+        <a class="btn" href="tel:+5521983817187">📞 Ligar</a>
+        <a class="btn" href="https://api.whatsapp.com/send?phone=5521983817187" target="_blank">💬 WhatsApp</a>
+        <a class="btn" href="#" onclick="alert('Adicione manualmente no WeChat');">🈲 WeChat</a>
+        <a class="btn" href="https://www.google.com/maps?q=Av.+Abelardo+Bueno,+1111,+Rio+de+Janeiro" target="_blank">📍 Ver Local</a>
+        <a class="btn" href="https://www.speedintrade.com" target="_blank">🌐 Site</a>
+        <a class="btn" href="https://www.instagram.com/speedintrade/" target="_blank">📸 Instagram</a>
+    </div>
+
+    <div id="china" class="section">
+        <h2>Contato - China</h2>
+        <a class="btn" href="tel:+8613953199185">📞 Ligar</a>
+        <a class="btn" href="https://api.whatsapp.com/send?phone=8613953199185" target="_blank">💬 WhatsApp</a>
+        <a class="btn" href="#" onclick="alert('Escaneie o QR Code no app WeChat');">🈲 WeChat</a>
+        <a class="btn" href="https://www.google.com/maps?q=Jingsi+Road+No.11,+Jinan,+China" target="_blank">📍 Ver Local</a>
+        <a class="btn" href="https://www.speedintrade.com" target="_blank">🌐 Site</a>
+        <a class="btn" href="https://www.instagram.com/speedintrade/" target="_blank">📸 Instagram</a>
+    </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(div => div.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
